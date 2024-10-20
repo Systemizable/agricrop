@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCrop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <img src="Pictures/basil.png" alt="Background" class="background-image">
+    <div class="container">
+        <div class="navigation">
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Pictures/instagram.svg" alt="Instagram" class="social-icon instagram-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="Pictures/Facebook.svg" alt="Facebook" class="social-icon facebook-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="Pictures/X.svg" alt="X (Twitter)" class="social-icon x-icon">
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#index" class="home-link">Home
+                        <img src="Pictures/house.svg" alt="house" class="house-icon">
+                    </a></li>
+
+                    <li class="dropdown">
+                        <a href="#crops" class="crops-link">Crops
+                            <img src="Pictures/crops.svg" alt="crops" class="icon crops-icon">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#information">Information</a></li>
+                            <li><a href="#tutorials">Tutorials</a></li>
+                            <li><a href="#guides">Guides</a></li>
+                            <li><a href="crops.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html" class="products-link">Products
+                        <img src="Pictures/products.svg" alt="products" class="icon products-icon">
+                    </a></li>
+                    <li><a href="#blogs" class="blogs-link">Blogs
+                        <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
+                    </a></li>
+                    <li><a href="#calendar" class="calendar-link">Calendar
+                        <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
+                    </a></li>
+                    <li><a href="#partners" class="partners-link">Our Partners
+                        <img src="Pictures/partner.svg" alt="partner" class="icon partner-icon">
+                    </a></li>
+                </ul>
+            </nav>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="Pictures/logo.png" alt="Logo" class="logo-img">
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="about-us">
+    <div class="container">
+        <!-- Learn Section -->
+        <div class="content-block">
+            <img src="Pictures/learn.png" alt="Learn Farming" class="image-left">
+            <div class="text-block">
+                <h2>Learn with Us</h2>
+                <p>
+                    We show you how to learn farming, implement sustainable practices, and cultivate the best produce. Our tutorials and guides are designed to help you become an expert in modern agriculture.
+                </p>
+                <a href="#learn-more" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Farm Section -->
+        <div class="content-block">
+            <div class="text-block">
+                <h2>Farm Fresh Produce</h2>
+                <p>
+                    Purchase the best produce money can buy. Our farm offers organic and fresh products grown with love and care, ensuring you get the healthiest produce.
+                </p>
+                <a href="#shop-now" class="btn">Shop Now</a>
+            </div>
+            <img src="Pictures/farm.png" alt="Farm Produce" class="image-right">
+        </div>
+
+        <!-- Collage Section -->
+        <div class="content-block">
+            <img src="Pictures/collage.png" alt="Collage of Merch" class="image-left">
+            <div class="text-block">
+                <h2>Support Us with Merch</h2>
+                <p>
+                    Check out our merch to support AgriCrop. From t-shirts to mugs, we have everything you need to show your love for farming and sustainable agriculture. Purchase merch and help us grow!
+                </p>
+                <a href="#shop-merch" class="btn">Buy Merch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="info_container">
+   
+    <section class="info_card" style="background-image: url('Pictures/calendar.png'); background-size: cover; background-position: center;">
+        <div class="card__content">
+            <div class="card__wrapper">
+                <h2>Events Calendar</h2>
+                <h3>Stay Updated</h3>
+                <p>Stay updated with our upcoming events. Join us for seminars, farm visits, and more!</p>
+                <a href="events.html" class="action-btn">View Events</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info_card" style="background-image: url('Pictures/volunteer.png'); background-size: cover; background-position: center;">
+        <div class="card__content">
+            <div class="card__wrapper">
+                <h2>Volunteer</h2>
+                <h3>Make a Difference</h3>
+                <p>Join our volunteer program and help us grow. Be a part of something amazing!</p>
+                <a href="volunteer.html" class="action-btn">Join Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info_card" style="background-image: url('Pictures/newsletter.png'); background-size: cover; background-position: center;">
+        <div class="card__content">
+            <div class="card__wrapper">
+                <h2>Subscribe to Newsletter</h2>
+                <h3>Stay Informed</h3>
+                <p>Subscribe to our newsletter for the latest updates, articles, and promotions.</p>
+                <a href="subscribe.html" class="action-btn">Subscribe</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="footer-col">
+                <h6>AgriCrop</h6>
+                <p>AgriCrop is dedicated to delivering high-quality produce directly from our farms to your table. We believe in sustainability and empowering farmers around the globe.</p>
+            </div>
+
+            <div class="footer-col">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Involved -->
+            <div class="footer-col">
+                <h6>Get Involved</h6>
+                <ul>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Join Us</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h6>Contact Us</h6>
+                <ul>
+                    <li>Beirut, Lebanon</li>
+                    <li>Email: info@agricrop.com</li>
+                    <li>Phone: +961 123 4567</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-icons2">
+                <a href="#"><img src="Pictures/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="Pictures/Facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="Pictures/X.svg" alt="Twitter"></a>
+            </div>
+            <p>© 2024 AgriCrop. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script>
+    function toggleMenu() {
+        const navList = document.querySelector('.nav-list');
+        const hamburger = document.querySelector('.hamburger');
+        navList.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+</script>
+</html>

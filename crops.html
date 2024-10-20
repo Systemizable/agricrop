@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Timeline</title>
+    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="timeline">
+
+    <div class="season">
+        <i class="fa-regular fa-snowflake" style="color: #046637;"></i> Winter
+    </div>
+    <div class="months">
+        <div class="month">
+            <div class="month-header">
+                <h3>December</h3>
+                <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/potato.png');">
+                    <span class="crop-name">Potato</span>
+                    <div class="crop-description">A starchy root vegetable that’s versatile and rich in nutrients.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/carrot.png');">
+                    <span class="crop-name">Carrot</span>
+                    <div class="crop-description">A crunchy root vegetable, perfect for soups and salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/onion.png');">
+                    <span class="crop-name">Onion</span>
+                    <div class="crop-description">Adds flavor to a wide variety of dishes around the world.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/broccoli.png');">
+                    <span class="crop-name">Broccoli</span>
+                    <div class="crop-description">A healthy green vegetable rich in vitamins and minerals.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/spinach.png');">
+                    <span class="crop-name">Spinach</span>
+                    <div class="crop-description">A leafy green packed with nutrients and antioxidants.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="month">
+            <div class="month-header">
+            <h3>January</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/lettuce.png');">
+                    <span class="crop-name">Lettuce</span>
+                    <div class="crop-description">A leafy green used in salads, rich in vitamins.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/garlic.png');">
+                    <span class="crop-name">Garlic</span>
+                    <div class="crop-description">A bulbous plant known for its health benefits and strong flavor.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/radish.png');">
+                    <span class="crop-name">Radish</span>
+                    <div class="crop-description">A crunchy root vegetable with a peppery flavor.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cabbage.png');">
+                    <span class="crop-name">Cabbage</span>
+                    <div class="crop-description">A leafy green vegetable, great in soups and salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/kale.png');">
+                    <span class="crop-name">Kale</span>
+                    <div class="crop-description">A nutrient-dense leafy green perfect for salads and smoothies.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>February</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/cauliflower.png');">
+                    <span class="crop-name">Cauliflower</span>
+                    <div class="crop-description">A versatile vegetable, perfect for low-carb recipes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/leek.png');">
+                    <span class="crop-name">Leek</span>
+                    <div class="crop-description">An onion-like vegetable, mild and sweet when cooked.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/chard.png');">
+                    <span class="crop-name">Chard</span>
+                    <div class="crop-description">A leafy vegetable with colorful stalks, high in vitamins.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/beetroot.png');">
+                    <span class="crop-name">Beetroot</span>
+                    <div class="crop-description">A root vegetable known for its deep red color and sweet flavor.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/parsley.png');">
+                    <span class="crop-name">Parsley</span>
+                    <div class="crop-description">An herb commonly used as a garnish, rich in nutrients.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <i class="fa-solid fa-spa" style="color: #046637;"></i> Spring
+    </div>
+    <div class="months">
+        <div class="month">
+            <div class="month-header">
+            <h3>March</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/peas.png');">
+                    <span class="crop-name">Peas</span>
+                    <div class="crop-description">A sweet legume that's great in soups and salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/carrot.png');">
+                    <span class="crop-name">Carrot</span>
+                    <div class="crop-description">A crunchy, orange root vegetable rich in beta-carotene.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/spinach.png');">
+                    <span class="crop-name">Spinach</span>
+                    <div class="crop-description">A leafy green vegetable high in iron and vitamins.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/lettuce.png');">
+                    <span class="crop-name">Lettuce</span>
+                    <div class="crop-description">A refreshing leafy vegetable commonly used in salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/beetroot.png');">
+                    <span class="crop-name">Beetroot</span>
+                    <div class="crop-description">A root vegetable with a sweet, earthy flavor.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>April</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/broccoli.png');">
+                    <span class="crop-name">Broccoli</span>
+                    <div class="crop-description">A cruciferous vegetable packed with vitamins and fiber.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/onion.png');">
+                    <span class="crop-name">Onion</span>
+                    <div class="crop-description">A pungent vegetable used to flavor a variety of dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/garlic.png');">
+                    <span class="crop-name">Garlic</span>
+                    <div class="crop-description">A bulbous vegetable known for its aromatic and health benefits.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cabbage.png');">
+                    <span class="crop-name">Cabbage</span>
+                    <div class="crop-description">A leafy green used in soups, salads, and stir-fries.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/kale.png');">
+                    <span class="crop-name">Kale</span>
+                    <div class="crop-description">A superfood leafy green, rich in nutrients and antioxidants.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>May</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/potato.png');">
+                    <span class="crop-name">Potato</span>
+                    <div class="crop-description">A versatile starchy root vegetable used in many cuisines.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/radish.png');">
+                    <span class="crop-name">Radish</span>
+                    <div class="crop-description">A crunchy vegetable with a sharp, peppery flavor.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/peas.png');">
+                    <span class="crop-name">Peas</span>
+                    <div class="crop-description">A green, sweet legume ideal for salads and side dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/lettuce.png');">
+                    <span class="crop-name">Lettuce</span>
+                    <div class="crop-description">A light and crispy green, great in fresh salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/spinach.png');">
+                    <span class="crop-name">Spinach</span>
+                    <div class="crop-description">A dark leafy green packed with nutrients and vitamins.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <i class="fa-solid fa-sun" style="color: #046637;"></i> Summer
+    </div>
+    <div class="months">
+        <div class="month">
+            <div class="month-header">
+            <h3>June</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/corn.png');">
+                    <span class="crop-name">Corn</span>
+                    <div class="crop-description">A sweet, yellow grain eaten fresh, grilled, or boiled.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/tomato.png');">
+                    <span class="crop-name">Tomato</span>
+                    <div class="crop-description">A juicy fruit often mistaken for a vegetable, used widely in cooking.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/pepper.png');">
+                    <span class="crop-name">Pepper</span>
+                    <div class="crop-description">A vibrant vegetable that comes in sweet and hot varieties.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cucumber.png');">
+                    <span class="crop-name">Cucumber</span>
+                    <div class="crop-description">A refreshing, crunchy vegetable perfect for salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/zucchini.png');">
+                    <span class="crop-name">Zucchini</span>
+                    <div class="crop-description">A summer squash with a mild flavor, great for grilling.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>July</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/tomato.png');">
+                    <span class="crop-name">Tomato</span>
+                    <div class="crop-description">A versatile ingredient in salads, sauces, and soups.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/eggplant.png');">
+                    <span class="crop-name">Eggplant</span>
+                    <div class="crop-description">A soft, spongy vegetable perfect for grilling and baking.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/pepper.png');">
+                    <span class="crop-name">Pepper</span>
+                    <div class="crop-description">Available in sweet and spicy varieties, adds flavor and color.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cucumber.png');">
+                    <span class="crop-name">Cucumber</span>
+                    <div class="crop-description">A hydrating, low-calorie vegetable used in summer dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/squash.png');">
+                    <span class="crop-name">Squash</span>
+                    <div class="crop-description">A summer favorite, often grilled or roasted.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>August</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/tomato.png');">
+                    <span class="crop-name">Tomato</span>
+                    <div class="crop-description">A favorite for fresh salsas and summer salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/basil.png');">
+                    <span class="crop-name">Basil</span>
+                    <div class="crop-description">An aromatic herb, perfect for Italian dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/pepper.png');">
+                    <span class="crop-name">Pepper</span>
+                    <div class="crop-description">Adds color and flavor to a wide range of dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/eggplant.png');">
+                    <span class="crop-name">Eggplant</span>
+                    <div class="crop-description">A meaty vegetable, delicious when grilled or roasted.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cucumber.png');">
+                    <span class="crop-name">Cucumber</span>
+                    <div class="crop-description">Cool and refreshing, often used in cold summer dishes.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="season">
+        <i class="fa-brands fa-envira" style="color: #046637;"></i> Fall
+    </div>
+    <div class="months">
+        <div class="month">
+            <div class="month-header">
+            <h3>September</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/pumpkin.png');">
+                    <span class="crop-name">Pumpkin</span>
+                    <div class="crop-description">A seasonal favorite, often used in pies and soups.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/sweetpotato.png');">
+                    <span class="crop-name">Sweet Potato</span>
+                    <div class="crop-description">A nutrient-rich root vegetable with a sweet flavor.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cabbage.png');">
+                    <span class="crop-name">Cabbage</span>
+                    <div class="crop-description">A crunchy vegetable often used in coleslaw and stews.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/broccoli.png');">
+                    <span class="crop-name">Broccoli</span>
+                    <div class="crop-description">A versatile veggie, excellent steamed or roasted.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/radish.png');">
+                    <span class="crop-name">Radish</span>
+                    <div class="crop-description">A peppery root vegetable, adds a kick to salads.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>October</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/pumpkin.png');">
+                    <span class="crop-name">Pumpkin</span>
+                    <div class="crop-description">An autumn classic, used in everything from pies to soups.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/carrot.png');">
+                    <span class="crop-name">Carrot</span>
+                    <div class="crop-description">A crunchy, sweet root vegetable full of beta-carotene.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/sweetpotato.png');">
+                    <span class="crop-name">Sweet Potato</span>
+                    <div class="crop-description">A staple in fall dishes, both sweet and savory.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/cabbage.png');">
+                    <span class="crop-name">Cabbage</span>
+                    <div class="crop-description">A versatile vegetable for soups, stir-fries, and coleslaws.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/broccoli.png');">
+                    <span class="crop-name">Broccoli</span>
+                    <div class="crop-description">A nutrient-dense vegetable, excellent for roasting and steaming.</div>
+                </div>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-header">
+            <h3>November</h3>
+            <button class="toggle-button" onclick="toggleMonth(this)">&#9650;</button>
+            </div>
+            <div class="crop-container">
+                <div class="crop-card" style="background-image: url('Pictures/pumpkin.png');">
+                    <span class="crop-name">Pumpkin</span>
+                    <div class="crop-description">Perfect for soups and pies, a fall staple.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/radish.png');">
+                    <span class="crop-name">Radish</span>
+                    <div class="crop-description">A sharp and spicy root vegetable, great in salads.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/kale.png');">
+                    <span class="crop-name">Kale</span>
+                    <div class="crop-description">A hardy green, ideal for sautés and soups.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/garlic.png');">
+                    <span class="crop-name">Garlic</span>
+                    <div class="crop-description">A flavorful bulb that enhances many dishes.</div>
+                </div>
+                <div class="crop-card" style="background-image: url('Pictures/onion.png');">
+                    <span class="crop-name">Onion</span>
+                    <div class="crop-description">A staple in cooking, adds depth of flavor to any dish.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script>
+    function toggleMonth(button) {
+        const monthContainer = button.closest('.month');
+        const cropContainer = monthContainer.querySelector('.crop-container');
+
+        if (cropContainer.classList.contains('collapsed')) {
+            cropContainer.classList.remove('collapsed');
+            button.style.transform = "rotate(180deg)";
+        } else {
+            cropContainer.classList.add('collapsed');
+            button.style.transform = "rotate(0deg)";
+        }
+    }
+
+</script>
+</html>
