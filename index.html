@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="header">
-    <img src="Pictures/basil.png" alt="Background" class="background-image">
+    <img src="Pictures/back.png" alt="Background" class="background-image">
     <div class="container">
         <div class="navigation">
             <!-- Social Icons -->
@@ -70,7 +70,7 @@
 
 <section class="about-us">
     <div class="container">
-        <!-- Learn Section -->
+
         <div class="content-block">
             <img src="Pictures/learn.png" alt="Learn Farming" class="image-left">
             <div class="text-block">
@@ -108,9 +108,9 @@
     </div>
 </section>
 
-<div class="info_container">
-   
-    <section class="info_card" style="background-image: url('Pictures/calendar.png'); background-size: cover; background-position: center;">
+<section class="info_container">
+
+    <div class="info_card" style="background-image: url('Pictures/calendar.png'); background-size: cover; background-position: center;">
         <div class="card__content">
             <div class="card__wrapper">
                 <h2>Events Calendar</h2>
@@ -119,9 +119,9 @@
                 <a href="events.html" class="action-btn">View Events</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="info_card" style="background-image: url('Pictures/volunteer.png'); background-size: cover; background-position: center;">
+    <div class="info_card" style="background-image: url('Pictures/volunteer.png'); background-size: cover; background-position: center;">
         <div class="card__content">
             <div class="card__wrapper">
                 <h2>Volunteer</h2>
@@ -130,9 +130,9 @@
                 <a href="volunteer.html" class="action-btn">Join Us</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="info_card" style="background-image: url('Pictures/newsletter.png'); background-size: cover; background-position: center;">
+    <div class="info_card expand-full" style="background-image: url('Pictures/newsletter.png'); background-size: cover; background-position: center;">
         <div class="card__content">
             <div class="card__wrapper">
                 <h2>Subscribe to Newsletter</h2>
@@ -141,8 +141,10 @@
                 <a href="subscribe.html" class="action-btn">Subscribe</a>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+
+</section>
+
 
 <footer class="footer-section">
     <div class="container">
@@ -199,10 +201,13 @@
 </body>
 <script>
     function toggleMenu() {
-        const navList = document.querySelector('.nav-list');
         const hamburger = document.querySelector('.hamburger');
-        navList.classList.toggle('active');
+        const navList = document.querySelector('.nav-list');
+
+        // Toggle the active class on both elements
         hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
     }
 </script>
+
 </html>
