@@ -5,8 +5,8 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x:hidden;
 }
-
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -26,15 +26,15 @@ body, html {
 
 .social-icons {
     display: flex;
-    gap: 0.9375rem; /* 15px */
+    gap: 15px;
     position: absolute;
-    top: 3rem;
-    right: 15%;
+    top: 2rem; /* Adjusted for better spacing */
+    right: 5%; /* Adjusted for better spacing */
 }
 
 .social-icon {
-    width: 3rem; /* 48px */
-    height: 3rem;
+    width: 40px; /* Adjusted size */
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -44,12 +44,12 @@ body, html {
 
 .logo {
     position: absolute;
-    top: 1.875rem; /* 30px */
-    left: 15%;
+    top: 1rem; /* Adjusted for better positioning */
+    left: 5%; /* Adjusted for better positioning */
 }
 
 .logo img {
-    width: 6.25rem; /* 100px */
+    width: 120px; /* Slightly larger size */
     height: auto;
     transition: transform 0.3s ease;
     transform-origin: center;
@@ -68,20 +68,34 @@ body, html {
 .nav-list {
     list-style: none;
     display: flex;
-    margin-top: -0.3125rem; /* -5px */
-    padding: 0;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: -100%; /* Initially hide the menu above the viewport */
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #046637;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    z-index: 999;
 }
-
+.nav-list.active {
+    top: 0; /* Slide down from the top */
+    opacity: 1;
+    visibility: visible;
+}
 .nav-list li {
-    margin: 0 0.9375rem; /* 15px */
+    margin: 0 15px;
 }
 
 .nav-list li a {
     color: #fff;
     text-decoration: none;
-    font-size: 2.1875rem; /* 35px */
-    padding: 0.75rem 0.2375rem;
+    font-size: 22px; /* Adjusted size for better fit */
+    padding: 0.75rem 0.5rem;
     transition: color 0.3s ease;
     font-family: 'Stint Ultra Condensed', sans-serif;
 }
@@ -92,12 +106,12 @@ body, html {
 
 .icon, .house-icon {
     opacity: 0;
-    transform: translateX(2.5rem); /* 40px */
+    transform: translateX(40px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     position: relative;
-    width: 3rem; /* 48px */
-    height: 3rem;
-    top: 0.3125rem; /* 5px */
+    width: 40px; /* Adjusted size */
+    height: 40px;
+    top: 5px;
 }
 
 .home-link:hover .house-icon,
@@ -120,15 +134,15 @@ body, html {
     top: 100%;
     left: 0;
     background-color: #046637;
-    min-width: 10rem; /* 160px */
-    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 0px 8px 16px */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-0.625rem); /* -10px */
-    transition: opacity 1.5s ease, transform 1.5s ease;
-    border: 0.125rem solid #fff100; /* 2px */
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 2px solid #fff100;
     text-align: left;
     padding: 0;
 }
@@ -142,13 +156,13 @@ body, html {
 .dropdown-menu li {
     display: flex;
     align-items: center;
-    padding: 0.625rem 1.25rem; /* 10px 20px */
+    padding: 10px 20px;
 }
 
 .dropdown-menu li a {
     color: #fff100;
-    font-size: 1.5rem; /* 24px */
-    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    font-size: 18px;
+    padding: 10px 5px;
     text-decoration: none;
     font-family: 'Stint Ultra Condensed', sans-serif;
     width: 100%;
@@ -159,26 +173,26 @@ body, html {
     background-color: #056637;
     text-decoration: underline;
 }
-/* Base styles for burger menu (hamburger) */
+
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 0.25rem;
+    gap: 0.3125rem; /* 5px in rem */
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 2rem; /* Adjust position */
+    left: 50%; /* Center the hamburger */
+    transform: translateX(-50%); /* Center alignment */
     z-index: 1001;
 }
 
 .hamburger span {
-    width: 2rem; /* 32px */
-    height: 0.25rem; /* 4px */
+    width: 2rem; /* 32px in rem */
+    height: 0.25rem; /* 4px in rem */
     background-color: #fff;
     transition: all 0.3s ease;
 }
 
-/* Burger menu animations for 'active' state */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -191,8 +205,7 @@ body, html {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Media query to show burger menu and hide regular navbar below 1120px */
-@media (max-width: 1120px) {
+@media (max-width: 1175px) {
     .navigation {
         display: flex;
         justify-content: space-between; /* Align elements on both sides */
@@ -202,18 +215,19 @@ body, html {
         position: sticky;
         top: 0;
         z-index: 1000;
-        padding: 2.5rem 1rem; /* Increase padding for a taller background */
-    }
-    .hamburger {
-        display: flex;
+        padding: 4.25rem 1rem; /* Increase padding for a taller background */
     }
 
-    /* Hide regular navbar */
+    .hamburger {
+        display: flex;
+        left:31rem;
+        top:3rem;
+    }
+
     .navbar {
         display: none;
     }
 
-    /* Styling for nav-list when active */
     .nav-list {
         position: absolute;
         top: 0;
@@ -232,13 +246,73 @@ body, html {
         z-index: 999;
     }
 
-    /* Show the nav-list when active */
     .nav-list.active {
         transform: translateY(0);
         visibility: visible;
         opacity: 1;
     }
 }
+
+@media (max-width: 48rem) { /* 768px in rem */
+    .hamburger {
+        display: flex; /* Show hamburger menu on mobile */
+    }
+
+    .navbar {
+        display: none; /* Hide regular navbar on mobile */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: #046637;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out, opacity 0.5s;
+        z-index: 999;
+    }
+
+    .nav-list.active {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 30rem) { /* 480px in rem */
+    .social-icons {
+        top: 1rem;
+        right: 2%; /* Adjusted for smaller screens */
+    }
+
+    .logo {
+        top: 1rem;
+        left: 2%; /* Adjusted for smaller screens */
+    }
+
+    .logo img {
+        width: 5rem; /* 80px in rem */
+    }
+
+    .nav-list li a {
+        font-size: 1.125rem; /* 18px in rem */
+    }
+
+    .social-icon {
+        width: 1.875rem; /* 30px in rem */
+        height: 1.875rem;
+    }
+}
+
+
 .hero {
     position: relative;
     width: 100%;
@@ -267,8 +341,8 @@ body, html {
 
 .carousel-item img {
     width: auto;
-    height: 80%; /* Ensure a consistent height */
-    max-width: 90%; /* Control max width to prevent overflow */
+    height: 95%; /* Increase image height */
+    max-width: 100%; /* Allow images to occupy the full width */
     object-fit: contain; /* Ensure images fit well */
     margin: 0 auto; /* Center the image */
 }
@@ -298,28 +372,31 @@ body, html {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh; /* Adjust height for smaller devices */
+        height: 55vh; /* Adjust height for smaller devices */
         border-bottom: 8px solid #056637; /* Ensure border extends fully */
+        margin-bottom:5rem;
     }
 
     .carousel-item img {
-        height: 70%; /* Reduce image height for better fit */
-        max-width: 85%; /* Adjust max width */
-        object-fit: contain; /* Ensure the image fits within the container */
+        width:200%;
+        height: 200%; /* Increase image size for better visibility */
+        max-width: 200%; /* Adjust max width */
+        object-fit: cover; /* Ensure the image fits within the container */
+        margin-bottom:5rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 40vh; /* Compact height for mobile */
+        height: 50vh; /* Compact height for mobile */
         margin-top: 20px; /* Adjust top margin */
         border-bottom: 8px solid #056637; /* Extend green border fully */
     }
 
     .carousel-item img {
-        height: 60%; /* Further reduce height */
-        max-width: 80%; /* Adjust max width */
-        object-fit: contain; /* Ensure the image fits within the container */
+        height: 85%; /* Further increase image size */
+        max-width: 90%; /* Ensure the image fits within the container */
+        object-fit: contain; /* Maintain aspect ratio */
     }
 }
 
@@ -629,57 +706,64 @@ body, html {
         font-size: 0.85em; /* Adjust font size */
     }
 }
-
-
 .footer-section {
     background-color: #046637;
     color: white;
-    padding: 40px 0;
+    padding: 40px 20px; /* Added side padding for smaller screens */
     font-family: 'Marcellus', sans-serif;
 }
+
 .footer-section .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .footer-section .row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
 }
+
 .footer-col {
     flex: 1;
     min-width: 250px;
     margin-bottom: 20px;
-    margin-left:50px;
+    margin-left: 50px;
 }
+
 .footer-col h6 {
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #fff100;
     font-size: 18px;
-
 }
+
 .footer-col p, .footer-col ul {
     font-size: 14px;
     color: white;
     line-height: 1.6;
 }
+
 .footer-col ul {
     list-style: none;
     padding: 0;
 }
+
 .footer-col ul li {
     margin-bottom: 10px;
 }
+
 .footer-col ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
+
 .footer-col ul li a:hover {
     color: #fff100;
 }
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -688,22 +772,70 @@ body, html {
     padding-top: 20px;
     margin-top: 20px;
     text-align: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
+
 .footer-bottom p {
     font-size: 14px;
+    margin: 10px 0; /* Added margin for better spacing on small screens */
 }
+
 .social-icons2 {
     display: flex;
     gap: 10px;
+    justify-content: center; /* Center icons on smaller screens */
 }
+
 .social-icons2 img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s;
 }
+
 .social-icons2 img:hover {
     transform: scale(1.2);
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-col {
+        min-width: 100%; /* Make columns take full width */
+        margin-left: 0; /* Remove side margin */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .social-icons2 {
+        margin-bottom: 10px; /* Add space below icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 20px 10px; /* Reduce padding for very small screens */
+    }
+
+    .footer-col h6 {
+        font-size: 16px; /* Adjust font size for headers */
+    }
+
+    .footer-col p, .footer-col ul {
+        font-size: 12px; /* Reduce text size for better fit */
+    }
+
+    .social-icons2 img {
+        width: 20px; /* Smaller icons for mobile */
+        height: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px; /* Smaller text for footer note */
+    }
+}
+
 ::-webkit-scrollbar {
     width: 24px;
 }
