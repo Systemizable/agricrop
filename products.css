@@ -242,18 +242,19 @@ body, html {
 .hero {
     position: relative;
     width: 100%;
-    height: 60vh; /* Adjusted for better responsiveness */
+    height: 60vh; /* Maintain responsive height */
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 10px solid #056637;
     margin-top: 60px;
-    overflow: hidden; /* Ensures the images don't overflow */
+    overflow: hidden; /* Prevents overflow */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
 }
 
 .carousel {
     display: flex;
-    width: 300%; /* 3 images */
+    width: 300%; /* Adjusted for 3 images */
     height: 100%;
     animation: slide 15s infinite;
 }
@@ -265,12 +266,14 @@ body, html {
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: 80%; /* Ensure a consistent height */
+    max-width: 90%; /* Control max width to prevent overflow */
+    object-fit: contain; /* Ensure images fit well */
+    margin: 0 auto; /* Center the image */
 }
 
-/* Keyframe animation to slide images */
+/* Keyframe animation for sliding images */
 @keyframes slide {
     0% {
         transform: translateX(0%);
@@ -293,38 +296,30 @@ body, html {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-    .hero {
-        height: 50vh; /* Reduce height for tablets */
-    }
-
-    .carousel {
-        animation: slide 18s infinite; /* Slightly longer for better viewing */
-    }
-}
-
 @media (max-width: 768px) {
     .hero {
-        height: 40vh; /* Further reduce height for smaller devices */
+        height: 50vh; /* Adjust height for smaller devices */
+        border-bottom: 8px solid #056637; /* Ensure border extends fully */
     }
 
     .carousel-item img {
-        object-fit: contain; /* Ensure images are fully visible */
+        height: 70%; /* Reduce image height for better fit */
+        max-width: 85%; /* Adjust max width */
+        object-fit: contain; /* Ensure the image fits within the container */
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 35vh; /* Compact height for mobile devices */
-        margin-top: 20px; /* Reduce margin for smaller screens */
-    }
-
-    .carousel {
-        animation: slide 20s infinite; /* Longer duration for better pacing */
+        height: 40vh; /* Compact height for mobile */
+        margin-top: 20px; /* Adjust top margin */
+        border-bottom: 8px solid #056637; /* Extend green border fully */
     }
 
     .carousel-item img {
-        object-fit: scale-down; /* Scale down images to fit better */
+        height: 60%; /* Further reduce height */
+        max-width: 80%; /* Adjust max width */
+        object-fit: contain; /* Ensure the image fits within the container */
     }
 }
 
