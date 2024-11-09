@@ -68,25 +68,13 @@ body, html {
 .nav-list {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    margin-top: -5px;
+    padding: 0;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    position: fixed;
-    top: -100%; /* Initially hide the menu above the viewport */
-    left: 0;
-    right: 0;
-    height: 100vh;
-    background-color: #046637;
-    opacity: 0;
-    visibility: hidden;
-    transition: top 0.5s ease, opacity 0.5s ease;
-    z-index: 999;
+    gap: 1rem; /* Space between items */
 }
-.nav-list.active {
-    top: 0; /* Slide down from the top */
-    opacity: 1;
-    visibility: visible;
-}
+
 .nav-list li {
     margin: 0 15px;
 }
@@ -178,17 +166,16 @@ body, html {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 0.3125rem; /* 5px in rem */
+    gap: 5px;
     position: absolute;
-    top: 2rem; /* Adjust position */
-    left: 50%; /* Center the hamburger */
-    transform: translateX(-50%); /* Center alignment */
+    top: 1.5rem;
+    right: 1.5rem;
     z-index: 1001;
 }
 
 .hamburger span {
-    width: 2rem; /* 32px in rem */
-    height: 0.25rem; /* 4px in rem */
+    width: 32px;
+    height: 4px;
     background-color: #fff;
     transition: all 0.3s ease;
 }
