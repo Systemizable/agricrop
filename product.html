@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Product Page</title>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="navigation">
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="Pictures/instagram.svg" alt="Instagram" class="social-icon instagram-icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="Pictures/Facebook.svg" alt="Facebook" class="social-icon facebook-icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <img src="Pictures/X.svg" alt="X (Twitter)" class="social-icon x-icon">
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="index.html" class="home-link">Home
+            <img src="Pictures/house.svg" alt="house" class="house-icon">
+          </a></li>
+
+          <li class="dropdown">
+            <a href="#crops" class="crops-link">Crops
+              <img src="Pictures/crops.svg" alt="crops" class="icon crops-icon">
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#information">Information</a></li>
+              <li><a href="#tutorials">Tutorials</a></li>
+              <li><a href="#guides">Guides</a></li>
+              <li><a href="crops.html">Timeline</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html" class="products-link">Products
+            <img src="Pictures/products.svg" alt="products" class="icon products-icon">
+          </a></li>
+          <li><a href="#blogs" class="blogs-link">Blogs
+            <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
+          </a></li>
+          <li><a href="#calendar" class="calendar-link">Calendar
+            <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
+          </a></li>
+          <li><a href="#partners" class="partners-link">Our Partners
+            <img src="Pictures/partner.svg" alt="partner" class="icon partner-icon">
+          </a></li>
+        </ul>
+
+      </nav>
+
+      <div class="logo">
+        <img src="Pictures/logo.png" alt="Logo" class="logo-img">
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<section>
+  <div class="product-display">
+    <div class="product-image">
+      <img src="Pictures/fertilizer.png" alt="All Purpose Fertilizer">
+    </div>
+    <div class="product-details">
+      <h1>All Purpose Fertilizer</h1>
+      <div class="rating">★★★★★ | 178 Reviews</div>
+      <p class="price">25 EUR</p>
+
+      <div class="size-selection">
+        <label for="size">Size:</label>
+        <select id="size" name="size">
+          <option value="5kg">5kg</option>
+          <option value="10kg" selected>10kg</option>
+          <option value="20kg">20kg</option>
+          <option value="50kg">50kg</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button class="btn-add-to-cart">Add to Cart</button>
+        <div class="btn-wishlist">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <p>
+        <span class="toggle-section" id="history">Benefits</span>
+        <span class="toggle-section" id="details">Details</span>
+        <span class="toggle-section" id="dimensions">Application</span>
+      </p>
+      <div class="description-content">
+        <div class="description-text active" id="history-content">
+          <p>This all-purpose fertilizer is formulated to support healthy plant growth for flowers, vegetables, trees, and shrubs. Rich in essential nutrients, it helps boost foliage, strengthen roots, and promote vibrant blooms.</p>
+        </div>
+        <div class="description-text" id="details-content">
+          <p>Our fertilizer is a balanced mix of nitrogen, phosphorus, and potassium (N-P-K 10-10-10) designed for optimal plant nourishment. It is made from high-quality, eco-friendly ingredients, ensuring safe application for both home gardens and larger agricultural projects.</p>
+        </div>
+        <div class="description-text" id="dimensions-content">
+          <p>For best results, apply the fertilizer evenly to soil around plants and water thoroughly. Use 1-2 cups per plant or 1kg per 10 square meters of garden space. Reapply every 4-6 weeks for sustained growth and health.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer-section">
+  <div class="container">
+    <div class="row">
+
+      <div class="footer-col">
+        <h6>AgriCrop</h6>
+        <p>AgriCrop is dedicated to delivering high-quality produce directly from our farms to your table. We believe in sustainability and empowering farmers around the globe.</p>
+      </div>
+
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6>Get Involved</h6>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Join Us</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6>Contact Us</h6>
+        <ul>
+          <li>Beirut, Lebanon</li>
+          <li>Email: info@agricrop.com</li>
+          <li>Phone: +961 123 4567</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons2">
+        <a href="#"><img src="Pictures/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="Pictures/Facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="Pictures/X.svg" alt="Twitter"></a>
+      </div>
+      <p>© 2024 AgriCrop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.toggle-section');
+    const texts = document.querySelectorAll('.description-text');
+
+    document.getElementById('history').classList.add('active');
+    document.getElementById('history-content').classList.add('active');
+
+    sections.forEach(section => {
+      section.addEventListener('click', function() {
+        if (this.classList.contains('active')) return;
+
+        sections.forEach(tab => tab.classList.remove('active'));
+        texts.forEach(content => {
+          content.classList.remove('active');
+          content.style.opacity = 0;
+          content.style.visibility = 'hidden';
+        });
+
+        this.classList.add('active');
+        const contentId = this.id + '-content';
+
+        setTimeout(() => {
+          document.getElementById(contentId).classList.add('active');
+          document.getElementById(contentId).style.opacity = 1;
+          document.getElementById(contentId).style.visibility = 'visible';
+        }, 500);
+      });
+    });
+    });
+</script>
+</body>
+</html>
