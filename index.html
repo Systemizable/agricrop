@@ -8,7 +8,13 @@
 </head>
 <body>
 <header class="header">
-	<img src="Pictures/back.png" alt="Background" class="background-image">
+    <div class="background-image-container">
+        <picture>
+            <source media="(max-width: 480px)" srcset="Pictures/back1.png">
+            <source media="(max-width: 768px)" srcset="Pictures/back1.png">
+            <img src="Pictures/back.png" alt="Background" class="background-image">
+        </picture>
+    </div>
     <div class="container">
         <div class="navigation">
 
