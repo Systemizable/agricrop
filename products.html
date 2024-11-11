@@ -11,17 +11,14 @@
 <header class="header">
     <div class="container">
         <div class="navigation">
+            <div class="logo">
+                <img src="Pictures/logo.png" alt="Logo" class="logo-img">
+            </div>
 
-            <div class="social-icons">
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="Pictures/instagram.svg" alt="Instagram" class="social-icon instagram-icon">
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="Pictures/Facebook.svg" alt="Facebook" class="social-icon facebook-icon">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="Pictures/X.svg" alt="X (Twitter)" class="social-icon x-icon">
-                </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
             <nav class="navbar">
@@ -54,23 +51,23 @@
                         <img src="Pictures/partner.svg" alt="partner" class="icon partner-icon">
                     </a></li>
                 </ul>
-
             </nav>
 
-            <div class="logo">
-                <img src="Pictures/logo.png" alt="Logo" class="logo-img">
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Pictures/instagram.svg" alt="Instagram" class="social-icon instagram-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="Pictures/Facebook.svg" alt="Facebook" class="social-icon facebook-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="Pictures/X.svg" alt="X (Twitter)" class="social-icon x-icon">
+                </a>
             </div>
-
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
         </div>
-
     </div>
 </header>
+
 <section class="hero">
     <div class="carousel">
         <div class="carousel-item">
@@ -263,13 +260,32 @@
     document.addEventListener('DOMContentLoaded', function () {
         const hamburger = document.querySelector('.hamburger');
         const navList = document.querySelector('.nav-list');
+        const dropdownLinks = document.querySelectorAll('.dropdown');
 
         hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navList.classList.toggle('active');
         });
-    });
 
+        // Event listener to add 'active' class to dropdown menu when clicking on dropdown links
+        dropdownLinks.forEach(dropdown => {
+            dropdown.addEventListener('click', function () {
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                dropdownMenu.classList.toggle('active');
+            });
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+                dropdownLinks.forEach(dropdown => {
+                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                    dropdownMenu.classList.remove('active');
+                });
+            }
+        });
+    });
 </script>
 </body>
 </html>
