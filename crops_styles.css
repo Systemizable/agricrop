@@ -674,10 +674,10 @@ ul#breadcrumb li a:hover {
 @media (max-width: 768px) {
     .hover-text {
         display: none;
-        position: fixed;
+        position: absolute;
         float:left;
+        width:50%;
         left:700px;
-
         top: 500px;
         padding: 5px;
         margin-right: 50px;
