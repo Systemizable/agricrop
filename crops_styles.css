@@ -658,7 +658,7 @@ ul#breadcrumb li a:hover {
     gap: 15px; /* Add space between squares */
 }
 @media (min-width: 769px){
-    .hover-text {
+    .hover-text !important{
         display: none;
         position: absolute;
         float:left;
@@ -673,7 +673,7 @@ ul#breadcrumb li a:hover {
 }
 @media (max-width: 768px) {
     .hover-text {
-        display: none;
+        display: none !important;
         position: absolute;
         float:left;
         width:50%;
