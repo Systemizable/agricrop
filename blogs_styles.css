@@ -374,11 +374,10 @@ h3 {
     color: #056637;
     font-size: 1.25em;
 }
-
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 60vh; /* Set a fixed height for the slideshow */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -399,15 +398,15 @@ h3 {
 
 .slide {
     min-width: 100%;
-    height: 100%;
+    height: 100%; /* Match the height of the container */
     position: relative;
 }
 
 .slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: 100%; /* Ensure all images take the full height */
+    object-fit: cover; /* Crop the image to fill the area while maintaining its aspect ratio */
+    object-position: center; /* Center the image for better cropping */
 }
 
 .grid-container {
@@ -665,6 +664,14 @@ ul li {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Reduce height for tablets and smaller screens */
+    }
+
+    .slide img {
+        object-fit: cover; /* Ensure the image scales appropriately */
+        height: auto; /* Maintain aspect ratio */
+    }
     h1 {
         font-size: 1.8em;
     }
@@ -692,6 +699,13 @@ ul li {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        height: 40vh; /* Further reduce height for mobile devices */
+    }
+
+    .slide img {
+        object-fit: contain; /* Allow the image to fit within the container */
+    }
     .comment-form input[type="text"],
     .comment-form textarea {
         padding: 0.5rem;

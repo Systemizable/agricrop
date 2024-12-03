@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
 
-body, html {
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x:hidden;
+    font-family: 'Marcellus', serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
 }
 .container {
     max-width: 100%;
@@ -18,13 +19,13 @@ body, html {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #5c703a; /* Main navbar color */
-    padding: 4rem 2rem;
+    background-color: #5c703a;
+    padding: 4rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
+
 /* Social Icons */
 .social-icons {
     display: flex;
@@ -82,17 +83,16 @@ body, html {
 }
 .nav-list li {
     margin: 0 15px;
-    background-color: transparent;
 }
 
 .nav-list li a {
-    background-color: transparent; /* Ensures no background color */
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
     padding: 0.75rem 0.5rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease;
     font-family: 'Stint Ultra Condensed', sans-serif;
+
 }
 
 .nav-list li a:hover {
@@ -357,91 +357,135 @@ body, html {
         transition: opacity 0.5s, transform 0.5s;
         border: 2px solid #fff100;
     }
-}
-@media (max-width:768px)
-{
-    .grid-container {
-        grid-template-column: 1fr;
-    }
-}
-p{
-    font-family: 'Marcellus';
-}
-h1, h2, h3{
-    font-family: 'Stint Ultra Condensed';
-}
-h1{
-    color: #056637;
+}/* Headings */
+h1, h2, h3 {
+    font-family: 'Stint Ultra Condensed', sans-serif;
     text-align: center;
+    margin-bottom: 1rem;
 }
-a{
-    text-decoration: none;
-    color:#056637;
+
+h1 {
+    color: #056637;
+    font-size: 2.5rem;
+    margin-top: 1rem;
 }
-a:hover{
-    text-decoration:underline;
-    cursor: pointer;
+
+h2 {
+    color: #056637;
+    font-size: 2rem;
 }
-.grid-container{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-right: 10%; margin-left: 10%;
-    margin-top: 3%; margin-bottom: 3%;
-    gap: 2%;
+
+h3 {
+    color: #923524;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
 }
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 2rem; /* Increased gap between child elements */
+}
+.partnersdiv {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 2rem 0; /* Added margin to separate sections further */
+    text-align: center;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.partnersdiv:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.circle-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem; /* Increased bottom margin for better spacing */
+    background-color: white;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    color: #333333;
+    text-align: center;
+    margin: 1rem 0; /* Increased margin for spacing */
+}
+
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .grid-container {
-        display: flex; /* Change grid to flexbox */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align the items */
-        gap: 2%; /* Maintain spacing */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        gap: 1.5rem; /* Slightly reduced gap for smaller screens */
     }
 
     .partnersdiv {
-        width: 90%; /* Adjust width for better appearance */
-        margin: 0 auto; /* Center each partner div */
+        margin: 1.5rem 0;
+    }
+
+    .circle-image {
+        margin-bottom: 1rem;
     }
 }
-.partnersdiv{
-    background-color: #f0f0f0;
-    color:black;
-    border-radius: 3.125em;
-    height:fit-content;
-    transition: transform 0.3s, z-index 0.3s; /* Transition effects */
-    z-index: 1; /* Default z-index */
-}
-.partnersdiv:hover{
-    transform: scale(1.1); /* Increase size on hover */
-    z-index: 10; /* Increase z-index on hover */
-}
-.grid-container:hover .partnersdiv:not(:hover) { /*when hover on grid and hover on element x, the others get smaller + blurred*/
-    transform: scale(0.9); /* Decrease size of non-hovered items */
-    filter: blur(0.125em); /* Apply blur effect */
-}
-.circle-image {
-    width: 7em; 
-    height: 7em; 
-    border-radius: 50%; 
-    margin-right: 1.875em;
-    margin-top: 1.25em;
-    margin-bottom: 1.875em;
-    margin-left: 1.25em;
-    object-fit: contain; 
-    background-color: white;
-    float: left;
-}
-h2{
-    margin:0.625em;
-    padding-top: 1.25em;
-    color:#056637;
-}
-h3{
-    margin-top: 0.3126em;
-    margin: 1.875em 1.875em;
-    color:#923524;
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .container {
+        gap: 1rem; /* Reduced gap for smaller devices */
+    }
+
+    .partnersdiv {
+        margin: 1rem 0;
+    }
+
+    .circle-image {
+        margin-bottom: 0.8rem;
+    }
 }
 .footer-section {
-
     background-color: #046637;
     color: white;
     padding: 40px 20px; /* Added side padding for smaller screens */
@@ -531,6 +575,7 @@ h3{
     transform: scale(1.2);
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .footer-col {
         min-width: 100%; /* Make columns take full width */
@@ -569,6 +614,7 @@ h3{
         font-size: 12px; /* Smaller text for footer note */
     }
 }
+
 ::-webkit-scrollbar {
     width: 24px;
 }
