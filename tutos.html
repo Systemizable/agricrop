@@ -6,6 +6,7 @@
         <meta name="description" content="AgriCrop Tutos">
         <meta name="keywords" content="farming, gardenning, quotes, farmers, tutos, tutorials">
         <meta name="viewports" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="backtotop.css">
     </head>
     <link rel="stylesheet" href="tutos_styles.css">
     <script src="https://kit.fontawesome.com/9794455bd0.js" crossorigin="anonymous"></script>
@@ -38,7 +39,6 @@
                                 <li><a href="crops.html">Information</a></li>
                                 <li><a href="tutos.html">Tutorials</a></li>
                                 <li><a href="crops.html">Guides</a></li>
-                                <li><a href="crops.html">Timeline</a></li>
                             </ul>
                         </li>
                         <li><a href="products.html" class="products-link">Products
@@ -47,7 +47,7 @@
                         <li><a href="blogs.html" class="blogs-link">Blogs
                             <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
                         </a></li>
-                        <li><a href="Calendars/december.html" class="calendar-link">Calendar
+                        <li><a href="calendar.html" class="calendar-link">Calendar
                             <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
                         </a></li>
                         <li><a href="partners.html" class="partners-link">Our Partners
@@ -71,6 +71,12 @@
         </div>
     </header>
 
+    <div id="breadcrumb">
+        <!--<ul id="breadcrumb">
+            <li><a href="" onclick="navigate1('crops')">Crops</a></li>
+        </ul>-->
+    </div>
+    
         <div class="container1">
             <div class="backim"></div>
             <div style="margin:5%;">
@@ -108,6 +114,10 @@
                         </div>
                     </div>
             </div>
+        </div>
+
+        <div class="vidiv">
+            <iframe class="vid" src="https://www.youtube.com/embed/ianApRDflh0?si=DsdfflTTmNr36jkT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     <footer class="footer-section">
         <div class="container">
@@ -158,9 +168,12 @@
             </div>
         </div>
     </footer>
+    <button id="backToTop" title="Go to top" class="hide">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
     </body>
 
-
+    <script src="DynamicBreadCrumb.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
@@ -231,4 +244,5 @@
         });
 
     </script>
+    <script src="backtotop.js"></script>
 </html>

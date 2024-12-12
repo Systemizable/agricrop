@@ -178,7 +178,7 @@ body {
     gap: 5px;
     position: absolute;
     top: 1.5rem;
-    left: 50%; /* Center the hamburger on smaller screens */
+    left: 40%; /* Center the hamburger on smaller screens */
     transform: translateX(-50%);
     z-index: 1001;
 }
@@ -199,7 +199,8 @@ body {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
         position: absolute;
@@ -377,7 +378,7 @@ h3 {
 .hero {
     position: relative;
     width: 100%;
-    height: 60vh; /* Set a fixed height for the slideshow */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,7 +405,7 @@ h3 {
 
 .slide img {
     width: 100%;
-    height: 100%; /* Ensure all images take the full height */
+    height: 70vh; /* Ensure all images take the full height */
     object-fit: cover; /* Crop the image to fill the area while maintaining its aspect ratio */
     object-position: center; /* Center the image for better cropping */
 }
@@ -416,17 +417,7 @@ h3 {
     margin: 2em;
 }
 
-.image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
 .content {
     background-color: rgba(4, 102, 55, 0.3);
@@ -668,10 +659,7 @@ ul li {
         height: 50vh; /* Reduce height for tablets and smaller screens */
     }
 
-    .slide img {
-        object-fit: cover; /* Ensure the image scales appropriately */
-        height: auto; /* Maintain aspect ratio */
-    }
+
     h1 {
         font-size: 1.8em;
     }
@@ -703,9 +691,6 @@ ul li {
         height: 40vh; /* Further reduce height for mobile devices */
     }
 
-    .slide img {
-        object-fit: contain; /* Allow the image to fit within the container */
-    }
     .comment-form input[type="text"],
     .comment-form textarea {
         padding: 0.5rem;
@@ -734,5 +719,35 @@ ul li {
     }
     .icons {
         font-size: 2em;
+    }
+}
+@media (max-width: 768px) {
+    /* On tablets and smaller screens, show the entire image */
+    .slide img {
+        height: auto; /* Let the image define its own height */
+        object-fit: contain; /* Ensures the whole image is shown */
+        object-position: center;
+    }
+
+    /* Ensure the hero section height adjusts based on the content (image) */
+    .hero {
+        height: auto;
+    }
+
+    .slide {
+        height: auto; /* Allow the slide to grow with the image */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens, the same logic applies (entire image visible) */
+    .slide img {
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .hero, .slide {
+        height: auto;
     }
 }

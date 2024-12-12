@@ -5,8 +5,9 @@
         <meta charset="UTF-8">
         <meta name="description" content="AgriCrop Blogs">
         <meta name="keywords" content="farming, gardenning, blogs, quotes, farmers, famous farmers">
-        <meta name="viewports" content="width=device-width initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="blogs_styles.css">
+        <link rel="stylesheet" href="backtotop.css">
     </head>
     <script src="https://kit.fontawesome.com/9794455bd0.js" crossorigin="anonymous"></script>
 
@@ -38,7 +39,7 @@
                                 <li><a href="crops.html">Information</a></li>
                                 <li><a href="tutos.html">Tutorials</a></li>
                                 <li><a href="crops.html">Guides</a></li>
-                                <li><a href="crops.html">Timeline</a></li>
+
                             </ul>
                         </li>
                         <li><a href="products.html" class="products-link">Products
@@ -47,7 +48,7 @@
                         <li><a href="blogs.html" class="blogs-link">Blogs
                             <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
                         </a></li>
-                        <li><a href="Calendars/december.html" class="calendar-link">Calendar
+                        <li><a href="calendar.html" class="calendar-link">Calendar
                             <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
                         </a></li>
                         <li><a href="partners.html" class="partners-link">Our Partners
@@ -76,27 +77,10 @@
                 <div class="slider">
                     <div class="slide">
                         <picture>
-                            <source srcset="Pictures/HarvestingSunset.jpg" media="(max-width:780px)">
-                            <img src="Pictures/farmLife.jpg" alt="farm1" style="max-width: 100%; height:auto;">
-                        </picture>
-            
-                    </div>
-                    <div class="slide">
-                        <picture>
-                            <source srcset="Pictures/potager.jpg" media="(max-width:780px)">
-                            <img src="Pictures/PlantTomatoes.jpg" alt="farm2" style="max-width: 100%; height:auto;">
-                        </picture>
-                    </div>
-                    <div class="slide">
-                        <picture>
-                            <source srcset="Pictures/strawberries.jpg" media="(max-width:780px)">
-                            <img src="Pictures/Vineyards.jpg" alt="farm3" style="max-width: 100%; height:auto;">
-                        </picture>
-                    </div>
-                    <div class="slide">
-                        <picture>
-                            <source srcset="Pictures/apple.jpg" media="(max-width:780px)">
-                            <img src="Pictures/HarvestPumpkins.jpg" alt="farm2" style="max-width: 100%; height:auto;">
+                            <!-- This source is used if the screen width is 600px or less -->
+                            <source srcset="Pictures/hero.jpg" media="(max-width: 700px)">
+                            <!-- The img tag below is the fallback if none of the sources match -->
+                            <img src="Pictures/hero_image.jpg" alt="Hero image" style="max-width: 100%; height:auto;">
                         </picture>
                     </div>
                 </div>
@@ -105,7 +89,7 @@
         
         <section class="grid-container">
             <div class="image">
-                <img src="Pictures/John.jpg" alt="john">
+                <img src="Pictures/Martha.jpg" alt="ellie">
             </div>
             <div class="content">
                 <h2>John "The Innovator"</h2>
@@ -132,7 +116,7 @@
 
         <section class="grid-container">
             <div class="image">
-                <img src="Pictures/Martha.jpg" alt="martha">
+                <img src="Pictures/tony.jpg" alt="ellie">
             </div>
             <div class="content">
                 <h2>Martha “The Orchardist” Ramirez</h2>
@@ -253,6 +237,9 @@
             </div>
         </div>
     </footer>
+    <button id="backToTop" title="Go to top" class="hide">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
     </body>
 
 
@@ -302,5 +289,5 @@
 
         setInterval(showNextSlide, 2000);
     </script>
-
+    <script src="backtotop.js"></script>
 </html>

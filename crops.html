@@ -6,6 +6,7 @@
         <meta name="description" content="AgriCrop crops">
         <meta name="keywords" content="farming, gardenning">
         <meta name="viewports" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="backtotop.css">
     </head>
     <link rel="stylesheet" href="crops_styles.css">
     <script src="https://kit.fontawesome.com/9794455bd0.js" crossorigin="anonymous"></script>
@@ -37,7 +38,7 @@
                                 <li><a href="crops.html">Information</a></li>
                                 <li><a href="tutos.html">Tutorials</a></li>
                                 <li><a href="crops.html">Guides</a></li>
-                                <li><a href="crops.html">Timeline</a></li>
+
                             </ul>
                         </li>
                         <li><a href="products.html" class="products-link">Products
@@ -46,7 +47,7 @@
                         <li><a href="blogs.html" class="blogs-link">Blogs
                             <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
                         </a></li>
-                        <li><a href="Calendars/december.html" class="calendar-link">Calendar
+                        <li><a href="calendar.html" class="calendar-link">Calendar
                             <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
                         </a></li>
                         <li><a href="partners.html" class="partners-link">Our Partners
@@ -70,13 +71,14 @@
         </div>
     </header>
 
-            <div>
-                <ul id="breadcrumb">
+            <div id="breadcrumb">
+                <!--<ul id="breadcrumb">
                     <li><a href="" onclick="navigate1('crops')">Crops</a></li>
-                </ul>
+                </ul>-->
+                
             </div>
 
-
+            
         <div class="welcome">
             <p style="text-align: center;">Welcome to our seasonal journey in farming and gardening!</p> 
             <p>
@@ -84,14 +86,14 @@
             </p>
         </div>
 
-        <div style="margin-left: 200px; margin-top:50px; position:absolute;">
-            <div class="center">
+        <div class="sdiv">
+            <!--<div class="center">
                 <button id="rotateBtn"><i class="fa-solid fa-rotate"></i></button>
-            </div>
+            </div>-->
             <div id="crops">
                 <div style="display: flex;">
                     <div id="square1">
-                        <button onclick="navigate1('WinterTimeline')" style="background-color: #B4C9C7; font-size: 1.5em;" 
+                        <button  onclick="navigate1('WinterTimeline')" style="background-image: url('Pictures/winter.jpg'); background-position: center; background-size: contain; font-size: 1.5em;"
                         class="sq center hover-button top-left">Winter</button>
                         <span class="hover-text" style="border: 5px solid #B4C9C7;">
                             <h2>Winter Season</h2>
@@ -104,7 +106,7 @@
                     </div>
                     
                     <div id="square2">
-                        <button onclick="navigate1('SpringTimeline')" style="background-color: #FDBB9F; font-size: 1.5em;" 
+                        <button onclick="navigate1('SpringTimeline')" style="background-image: url('Pictures/spring.jpg'); background-position: center; background-size: contain; font-size: 1.5em;" 
                         class="sq center hover-button top-right">Spring</button>
                         <span class="hover-text" style="border: 5px solid #FDBB9F;">
                             <h2>Spring Season</h2>
@@ -118,7 +120,7 @@
                 </div>
                 <div style="display: flex;">
                     <div id="square3">
-                        <button onclick="navigate1('SummerTimeline')" style="background-color: #EDC02C; font-size: 1.5em;" 
+                        <button onclick="navigate1('SummerTimeline')" style="background-image: url('Pictures/summer.jpeg'); background-position: center; background-size: contain; font-size: 1.5em;" 
                         class="sq center hover-button bottom-left">Summer</button>
                         <span class="hover-text" style="border: 5px solid #EDC02C;">
                             <h2>Summer Season</h2>
@@ -131,7 +133,7 @@
                     </div>
                     
                     <div id="square4">
-                        <button onclick="navigate1('FallTimeline')" style="background-color: #506432; font-size: 1.5em;"
+                        <button onclick="navigate1('FallTimeline')" style="background-image: url('Pictures/fall.jpg'); background-position: center; background-size: contain; font-size: 1.5em;"
                          class="sq center hover-button bottom-right">Fall</button>
                         <span class="hover-text" style="border: 5px solid #506432;">
                             <h2>Fall Season</h2>
@@ -144,21 +146,21 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <br>
-                <h1 style="font-size: 1.5em;">Check out the guides!</h1>
-                <div style="display: flex; margin-left: 50px;">
-                    <div>
-                        <img src="Pictures/guides.png" alt="guides" class="guides">
-                    </div>
-                    <div>
-                        <button id="pdfbutton"><i class="fa-regular fa-file-pdf"></i></button>
-                    </div>
-                </div>
-                
-            </div>
         </div>
         
+        <div class="pdf">
+            <br>
+            <h1 style="font-size: 1.5em;">Check out the guides!</h1>
+            <div style="display: flex; margin-left: 50px;">
+                <div>
+                    <img src="Pictures/guides.png" alt="guides" class="guides">
+                </div>
+                <div>
+                    <button id="pdfbutton"><i class="fa-regular fa-file-pdf"></i></button>
+                </div>
+            </div>
+        </div>
+
         <section class="timeline">
 
             <div class="season" id="WinterTimeline">
@@ -174,7 +176,12 @@
                         <div class="crop-card" style="background-image: url('Pictures/potato.png');">
                             <span class="crop-name">Potato</span>
                             <div class="crop-description">A starchy root vegetable that’s versatile and rich in nutrients.</div>
+                            <button class="tuto">
+                                <a href="tutos.html">View Tutorial</a>
+                            </button>
                         </div>
+
+
                         <div class="crop-card" style="background-image: url('Pictures/carrot.png');">
                             <span class="crop-name">Carrot</span>
                             <div class="crop-description">A crunchy root vegetable, perfect for soups and salads.</div>
@@ -574,6 +581,10 @@
             </div>
         </footer>
     </body>
+    <button id="backToTop" title="Go to top" class="hide">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script src="DynamicBreadCrumb.js"></script>
 
     <script>
         function toggleText(id) {
@@ -593,7 +604,7 @@
             }
         }
 
-            document.getElementById('rotateBtn').addEventListener('click', function() {
+            /*document.getElementById('rotateBtn').addEventListener('click', function() {
             // Get the button elements inside each square
             let square1Button = document.querySelector('#square1 button');
             let square2Button = document.querySelector('#square2 button');
@@ -663,45 +674,53 @@
             square4HoverText.innerHTML = square3Content.hoverText;
             square4HoverText.style.borderColor = square3Content.hoverBorderColor;
             square4Button.setAttribute('onclick', square3Content.navigate);
-        });
+        });*/
         
         function navigate1(section) { //id
-            const breadcrumb = document.getElementById('breadcrumb');
-            const existingCrumb = Array.from(breadcrumb.getElementsByTagName('li')).find(li => {
-                const link = li.getElementsByTagName('a')[0];
-                return link && link.innerText.toLowerCase() === section.toLowerCase();
-            });
+            //let breadcrumbTrail = JSON.parse(localStorage.getItem("breadcrumbTrail")) || [];
+            //const breadcrumb = document.getElementById('breadcrumb');
+            //const existingCrumb = Array.from(breadcrumb.getElementsByTagName('li')).find(li => {
+                //const link = li.getElementsByTagName('a')[0];
+                //return link && link.innerText.toLowerCase() === section.toLowerCase();
+            //});
 
-            // If the link already exists, do not add a new one
-            if (existingCrumb) {
+           // If the link already exists, do not add a new one
+           //if (existingCrumb) {
                 // Remove subsequent items after the clicked one
-                const index = Array.from(breadcrumb.getElementsByTagName('li')).indexOf(existingCrumb);
-                while (breadcrumb.children.length > index + 1) {
-                    breadcrumb.removeChild(breadcrumb.lastChild);
-                }
+                //const index = Array.from(breadcrumb.getElementsByTagName('li')).indexOf(existingCrumb);
+                //alert(index);
+                //while (breadcrumb.children.length > index + 1) {
+                    //breadcrumb.removeChild(breadcrumb.lastChild);
+                //}
                 // Optionally scroll to the existing section
-                document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
-                return;
-            }
+                //document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+                //return;
+           //}
+          
+        // Add the current section if not already in the trail
+        //if (!breadcrumbTrail.includes("crops.html#"+section)) {
+            //breadcrumbTrail.push("crops.html#"+section);
+            //localStorage.setItem("breadcrumbTrail", JSON.stringify(breadcrumbTrail));
+       //}
 
             // Create a new breadcrumb item if it doesn't exist
-            const newCrumb = document.createElement('li');
-            const url = `#${section}`;
+            //const newCrumb = document.createElement('li');
+            //const url = `#${section}`;
             
-            newCrumb.innerHTML = `<a href="${url}" onclick="navigate1('${section}')">${section.charAt(0).toUpperCase() + section.slice(1)}</a>`;
+            //newCrumb.innerHTML = `<a href="${url}" onclick="navigate1('${section}')">${section.charAt(0).toUpperCase() + section.slice(1)}</a>`;
             
 
             // If there are existing items, add a chevron before the new item
-            if (breadcrumb.children.length > 0) {
-                const chevron = document.createElement('i');
-                chevron.className = 'fa-solid fa-chevron-right arrow';
+            //if (breadcrumb.children.length > 0) {
+                //const chevron = document.createElement('i');
+                //chevron.className = 'fa-solid fa-chevron-right arrow';
                 
                 // Create a temporary list item for the chevron
-                const chevronItem = document.createElement('li');
-                chevronItem.appendChild(chevron);
-                breadcrumb.appendChild(chevronItem); // Append chevron to the breadcrumb
-            }
-            breadcrumb.appendChild(newCrumb);
+                //const chevronItem = document.createElement('li');
+                //chevronItem.appendChild(chevron);
+                //breadcrumb.appendChild(chevronItem); // Append chevron to the breadcrumb
+            //}
+            //breadcrumb.appendChild(newCrumb);
             
             // Scroll to the section
             document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
@@ -775,7 +794,7 @@
             button.style.transform = "rotate(0deg)";
         }
     }
-            document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
                 const hamburger = document.querySelector('.hamburger');
                 const navList = document.querySelector('.nav-list');
                 const dropdownLinks = document.querySelectorAll('.dropdown');
@@ -804,7 +823,17 @@
                     }
                 });
             });
+        /*document.getElementById('rotateBtn').addEventListener('click', function () {
+            const button = this;
+            button.classList.add('rotate');
+
+            // Remove the class after the animation ends to reset
+            button.addEventListener('animationend', function () {
+                button.classList.remove('rotate');
+            }, { once: true });
+        });*/
+
     </script>
 
-
+    <script src="backtotop.js"></script>
 </hmtl>

@@ -8,6 +8,7 @@ body {
     font-family: 'Marcellus', serif;
     background-color: #f8f8f8;
     line-height: 1.6;
+    overflow-x:hidden;
 }
 .container {
     max-width: 100%;
@@ -380,27 +381,37 @@ h3 {
     font-size: 1.5rem;
     margin: 0.5rem 0;
 }
+.partnersdiv h2 a {
+    color: #923524; /* Set a custom color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
 
+.partnersdiv h2 a:hover {
+    color: #046637; /* Change to a desired hover color */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
 .grid-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Space items evenly on larger screens */
     margin: 2rem auto;
     padding: 1rem;
-    max-width: 600px;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    gap: 2rem; /* Increased gap between child elements */
+    max-width: 1200px; /* Adjust to fit larger screens */
+    gap: 1.5rem; /* Space between the items */
+    box-sizing: border-box; /* Include padding and borders in width */
 }
+
 .partnersdiv {
+    flex: 1 1 100%; /* Default: Full width for mobile and smaller screens */
+    max-width: 100%; /* Stack vertically on smaller screens */
     background-color: #f0f0f0;
     color: black;
     border-radius: 1rem;
     padding: 1.5rem;
-    margin: 2rem 0; /* Added margin to separate sections further */
     text-align: center;
     transition: transform 0.3s, filter 0.3s;
+    box-sizing: border-box;
 }
 
 .partnersdiv:hover {
@@ -411,7 +422,7 @@ h3 {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 1.5rem; /* Increased bottom margin for better spacing */
     background-color: white;
 }
@@ -447,8 +458,13 @@ p {
         gap: 1.5rem; /* Slightly reduced gap for smaller screens */
     }
 
+    .grid-container {
+        justify-content: space-between; /* Spread items evenly */
+    }
+
     .partnersdiv {
-        margin: 1.5rem 0;
+        flex: 1 1 calc(33.333% - 1rem); /* Allow three items per row */
+        max-width: calc(33.333% - 1rem); /* Ensure proper spacing */
     }
 
     .circle-image {

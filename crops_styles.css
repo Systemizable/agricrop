@@ -23,8 +23,8 @@ body, html {
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -73,12 +73,13 @@ body, html {
 .nav-list {
     list-style: none;
     display: flex;
-    margin: 0; /* Remove any extra margin */
+    margin: 0;
     padding: 0;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
 }
+
 .nav-list li {
     margin: 0 15px;
     background-color: transparent;
@@ -103,7 +104,7 @@ body, html {
     transform: translateX(40px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     position: relative;
-    width: 40px; /* Adjusted size */
+    width: 40px;
     height: 40px;
     top: 5px;
 }
@@ -123,14 +124,14 @@ body, html {
 }
 
 .dropdown-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #046637;
-    min-width: 160px;
+    min-width: 12rem;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
@@ -155,7 +156,7 @@ body, html {
 
 .dropdown-menu li a {
     color: #fff100;
-    font-size: 18px;
+    font-size: 2rem;
     padding: 10px 5px;
     text-decoration: none;
     font-family: 'Stint Ultra Condensed', sans-serif;
@@ -167,7 +168,6 @@ body, html {
     background-color: #056637;
     text-decoration: underline;
 }
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -175,10 +175,10 @@ body, html {
     gap: 5px;
     position: absolute;
     top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 2rem;
     z-index: 1001;
 }
+
 .hamburger span {
     width: 32px;
     height: 4px;
@@ -196,22 +196,18 @@ body, html {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        z-index: 1001;
     }
 
     .nav-list {
         position: absolute;
-        top: 20rem;
+        top: 8rem;
         left: 0;
         right: 0;
         height: auto;
-        margin-top: 2rem;
         background-color: #046637;
         flex-direction: column;
         justify-content: center;
@@ -234,30 +230,16 @@ body, html {
         opacity: 1;
     }
 
-    .nav-list li {
-        margin: 0;
-        padding: 1rem 0;
-    }
-
     .nav-list li a {
+        font-size: 5rem !important; /* Increased font size */
+        line-height: 6rem; /* Adjusted for proper spacing */
         color: #fff100;
-        text-decoration: none;
-        font-size: 4rem !important;
-        line-height: 5rem;
         text-align: center;
         transition: color 0.3s ease, font-size 0.3s ease;
     }
 
     .nav-list li a:hover {
         color: #ffffff;
-    }
-
-    .social-icons {
-        position: absolute;
-        top: 2.5rem;
-        right: 1rem;
-        display: flex;
-        gap: 10px;
     }
 
     .dropdown-menu {
@@ -279,11 +261,12 @@ body, html {
         border: 2px solid #fff100;
         border-radius: 10px;
     }
-
-    .dropdown:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+    .nav-list.active li a {
+        font-size: 6rem !important; /* Make it even larger */
+        line-height: 7rem; /* Adjust line spacing */
+        color: #fff100;
+        text-align: center;
+        transition: color 0.3s ease, font-size 0.3s ease;
     }
 }
 
@@ -362,30 +345,34 @@ p{
 h1, h2, h3{
     font-family: 'Stint Ultra Condensed', serif;
 }
-ul#breadcrumb {
+#breadcrumb {
+    display:flex;
     max-width: fit-content;
     min-width: fit-content;
     padding: 10px;
+    margin-top: 5px;
     list-style-type: none;
     overflow: hidden;
     background-color: #056637;
 }
 
-ul#breadcrumb li {
+#breadcrumb li {
     float: left;
     font-size: 1.2em;
     font-family: 'Stint Ultra Condensed', sans-serif; /* Added a fallback font */
 }
 
-ul#breadcrumb li a {
+#breadcrumb a {
     display: block;
     color: white;
     text-align: center;
     padding: 10px;
     text-decoration: none;
+    font-size: 1em;
+    font-family: 'Stint Ultra Condensed', sans-serif;
 }
 
-ul#breadcrumb li a:hover {
+#breadcrumb a:hover {
     color: #fff100;
 }
 
@@ -398,18 +385,26 @@ ul#breadcrumb li a:hover {
     display: grid;
     place-items: center;
 }
+.sdiv{
+    position:relative;
+    margin-left: 100px; 
+    margin-top:50px; 
+    display: flex;
+    align-items: flex-start;
+}
 .sq{
     text-align: center;
-    font-family: 'Stint Ultra Condensed';
-    color:white;
-    font-size: large;
-    margin: 10px; 
-    width:200px;
-    height:200px;
+    font-family: 'Stint Ultra Condensed', sans-serif;
+    color:whitesmoke;
+    font-weight: bolder;
+    letter-spacing:0.05em;
+    margin: 5px; 
+    width:10rem;
+    height:10rem;
     border:none;
     cursor: pointer;
     transition: transform 0.3s, z-index 0.3s;
-    z-index: 1;
+    z-index: 0;
     /*transition is in seconds (how fast the transition is made) 
     and the transform changes the size used with scale that makes the element bigger 
     while z index makes the element appear on top of others*/
@@ -439,15 +434,16 @@ ul#breadcrumb li a:hover {
     display: none;
     position: absolute;
     float:left;
-    left:600px;
-    width:200%;
-    top: 300px;
+    left:25em;
+    width:250%;
+    top: 50px;
     padding: 5px;
-    margin-right: 50px;
+    margin-right: auto;
+    margin-left:auto;
     border-radius: 3px;
+    font-size: 1em;
     word-wrap: break-word;
 }
-
 .hover-button:hover + .hover-text {
     display: inline-block;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -456,13 +452,49 @@ ul#breadcrumb li a:hover {
     display: none;
 }
 .welcome{
-    position: absolute;
-    float:left;
-    left:700px;
-    top: 150px; 
-    margin-right: 50px;
+    position: relative;
+    float: none;
+    left: 0;
+    top:2em;
+    text-align: center;
     font-size:1.25em;
-    margin-top:200px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:50px;
+    margin-bottom: 30px;
+}
+@media (max-width: 790px) {
+    .sdiv {
+        margin-top:50px;
+        align-items: center;
+    }
+    .hover-button:hover + .hover-text{
+        display:none;
+    }
+}
+@media (min-width: 791px) and (max-width: 900px) {
+    .hover-text{
+        width:70%;
+        top: 50px;
+    }
+}
+@media (min-width: 901px) and (max-width: 1000px) {
+    .hover-text{
+        width:100%;
+        top: 50px;
+    }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .hover-text{
+        width:130%;
+        top: 50px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .hover-text{
+        width:190%;
+        top: 50px;
+    }
 }
 #rotateBtn {
     position: absolute;
@@ -482,6 +514,21 @@ ul#breadcrumb li a:hover {
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+@keyframes rotateAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#rotateBtn.rotate {
+    animation: rotateAnimation 0.5s linear;
+}
+.pdf {
+    margin-left: 100px;
+}
 #pdfbutton{
     background-color: #aa0000;
     color:white;
@@ -491,8 +538,10 @@ ul#breadcrumb li a:hover {
     margin: 5px;
     border:none;
     border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 #pdfbutton:hover{
+    transform: scale(1.1);
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -504,7 +553,7 @@ ul#breadcrumb li a:hover {
 
 .timeline {
     max-width: 1000px;
-    margin: 850px auto;
+    margin: 50px auto;
     background-color: #f5f5f5;
     border: 2px solid #f5f5f5;
     padding: 20px;
@@ -605,7 +654,27 @@ ul#breadcrumb li a:hover {
     transform: scale(0.9);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+.tuto {
+    position: relative; /* Ensure positioning */
+    font-family: "Stint Ultra Condensed", sans-serif;
+    letter-spacing: 0.05em;
+    background-color: #056637;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center; /* Center text */
+    display: inline-block; /* Ensure proper button display */
+    margin-left:10px;
+}
 
+.tuto a {
+    text-decoration: none;
+    color: #fff; /* Keep link text white */
+    font-size: inherit; /* Inherit font size */
+}
 .crop-container {
     display: flex;
     justify-content: flex-start;
@@ -657,34 +726,8 @@ ul#breadcrumb li a:hover {
     align-items: center; /* Center align squares and text */
     gap: 15px; /* Add space between squares */
 }
-@media (min-width: 769px){
-    .hover-text !important{
-        display: none;
-        position: absolute;
-        float:left;
-        left:600px;
-        width:200%;
-        top: 300px;
-        padding: 5px;
-        margin-right: 50px;
-        border-radius: 3px;
-        word-wrap: break-word;
-    }
-}
-@media (max-width: 768px) {
-    .hover-text {
-        display: none !important;
-        position: absolute;
-        float:left;
-        width:50%;
-        left:700px;
-        top: 500px;
-        padding: 5px;
-        margin-right: 50px;
-        border-radius: 3px;
-        word-wrap: break-word;
-    }
 
+@media (max-width: 768px) {
     #crops {
         flex-direction: column;
         align-items: center;
@@ -758,7 +801,7 @@ ul#breadcrumb li a:hover {
     }
 }
 .footer-section {
-    margin-top:-550px;
+    margin-top:150px;
     background-color: #046637;
     color: white;
     padding: 40px 20px; /* Added side padding for smaller screens */

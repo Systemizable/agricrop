@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriCrop</title>
+    <meta name="keywords" content="farming, gardenning, partners">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="backtotop.css">
 </head>
 <body>
 <header class="header">
@@ -48,7 +50,7 @@
                             <li><a href="crops.html">Information</a></li>
                             <li><a href="tutos.html">Tutorials</a></li>
                             <li><a href="crops.html">Guides</a></li>
-                            <li><a href="crops.html">Timeline</a></li>
+
                         </ul>
                     </li>
                     <li><a href="products.html" class="products-link">Products
@@ -57,7 +59,7 @@
                     <li><a href="blogs.html" class="blogs-link">Blogs
                         <img src="Pictures/blog.svg" alt="blog" class="icon blog-icon">
                     </a></li>
-                    <li><a href="Calendars/december.html" class="calendar-link">Calendar
+                    <li><a href="calendar.html" class="calendar-link">Calendar
                         <img src="Pictures/calendar.svg" alt="calendar" class="icon calendar-icon">
                     </a></li>
                     <li><a href="partners.html" class="partners-link">Our Partners
@@ -198,8 +200,9 @@
         </div>
     </div>
 </footer>
-
-</body>
+<button id="backToTop" title="Go to top" class="hide">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
 <script>
     function toggleMenu() {
         const hamburger = document.querySelector('.hamburger');
@@ -208,6 +211,9 @@
         hamburger.classList.toggle('active');
         navList.classList.toggle('active');
     }
+
 </script>
+<script src="backtotop.js"></script>
+</body>
 
 </html>

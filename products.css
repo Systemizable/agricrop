@@ -464,8 +464,8 @@ body, html {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    padding: 20px;
-    width:90%;
+    padding: 5px;
+    width:70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto; /* Adjust for responsiveness */
     display: flex;
